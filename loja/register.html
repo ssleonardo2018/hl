@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro - Nutriação</title>
+</head>
+<body>
+  <h1>Cadastro</h1>
+  <form method="POST">
+    <label>Email:</label><br>
+    <input type="email" name="email" required><br>
+    <label>Senha:</label><br>
+    <input type="password" name="password" required><br><br>
+    <button type="submit">Cadastrar</button>
+  </form>
+  <a href="{{ url_for('login') }}">Já tem conta? Faça login</a>
+</body>
+</html>

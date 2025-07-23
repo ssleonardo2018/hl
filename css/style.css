@@ -1,0 +1,276 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+
+nav {
+    background-color: #2d3748;
+    color: white;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.logo-container span {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #fbd38d;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+    .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+    }
+
+    .menu.active {
+    display: flex;
+    }
+
+    .hamburger {
+    display: flex;
+    }
+}
+
+header {
+    background-color: #fbd38d;
+    color: #2d3748;
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    background-color: #2d3748;
+    color: white;
+    
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #ff7f00;
+}
+
+
+
+/*--------------------------------------
+
+/* Benefícios */
+.beneficios {
+  padding: 60px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+.beneficios h2 {
+  margin-bottom: 30px;
+}
+.grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.grid .item {
+  width: 200px;
+  padding: 20px;
+  text-align: center;
+}
+.grid img {
+  width: 40px;
+  margin-bottom: 10px;
+}
+
+/* Depoimentos */
+.depoimentos {
+  background-color: #ffffff;
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 800px;
+  border-left: 5px solid #FF7A00;
+  
+  
+  text-align: center;
+}
+blockquote {
+  font-style: italic;
+  margin-bottom: 20px;
+
+}
+
+
+.servicos {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.servicos .serv {
+  width: 200px;
+  padding: 21px;
+  text-align: center;
+  color:#004080
+}
+.servicos img {
+  width: 100px;
+  height: 100px;
+  
+  margin-bottom: 10px;
+  background-image: url('sua-imagem.jpg'); /* Caminho da imagem */
+  background-size: cover; /* Amplia a imagem para cobrir toda a div */
+  background-repeat: no-repeat; /* Evita repetição da imagem */
+  background-position: center; /* Centraliza a imagem */
+  border-radius: 10%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+
+
+/* Formulário */
+.form-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 60px 20px;
+  background: #f0f0f0;
+}
+.form-section .left,
+.form-section .right {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+form input,
+form button,
+.form-section select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+  margin: 10px 0;
+ 
+  font-size: 1rem;
+}
+form button {
+  background-color: #2d3748;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Rodapé */
+.footer {
+  background: #2d3748;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+.parcerias {
+  display: flex;
+  justify-content:space-around;
+  padding: 60px 20px;
+    
+}
+
+.parcerias h3{
+  margin-bottom: 10px;
+
+}
+
+.parcerias .left img {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  background: white;
+}
+
+
+.parcerias .right img {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  background: white;
+}
+
+
+
+.footer p{
+  margin: 10px;
+  
+}
+
+.social-links {
+  margin-top: 10px;
+}

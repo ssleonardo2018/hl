@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HL Elétricos e Automação</title>
+  <!-- Adicionando o favicon -->
+  <link rel="icon" href="assets/logo.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="/css/style.css"/>
+  <script defer src="/js/script.js"></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo-container">
+      <img src="assets/logo.png" alt="Logo">
+      <span>HL Elétrica e Automação</span>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="menu" id="nav-menu">
+      <a href="#sobre">Sobre</a>
+      <a href="#beneficios">Benefícios</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#diferenciais">Diferenciais</a>
+      <a href="#orcamento">Orçamento</a>
+      <a href="#parcerias">Clietes e Parceiros</a>
+    </div>
+  </nav>
+
+
+
+  <!-- Hero -->
+  <header id="sobre">
+    <!--<h1>HL Elétrica e Automação</h1>-->
+    <p>Um novo jeito de cuidar da sua saúde usando a tecnologia ao seu favor.</p>
+    <a href="#orcamento" class="btn-primary">Agende sua visita técnica</a>
+  </header>
+
+
+
+
+
+
+  <!-- Benefícios -->
+  <section class="beneficios" id="beneficios">
+    <h2>Benefícios do serviço</h2>
+    <div class="grid">
+      <div class="item">
+        <img src="https://img.icons8.com/ios-filled/50/bar-chart.png"/>
+        <p>Redução no consumo de energia</p>
+      </div>
+      <div class="item">
+        <img src="https://img.icons8.com/ios-filled/50/checked-shield.png"/>
+        <p>Garantia e conformidade com normas</p>
+      </div>
+      <div class="item">
+        <img src="https://img.icons8.com/ios-filled/50/flash-on.png"/>
+        <p>Agilidade na execução</p>
+      </div>
+      <div class="item">
+        <img src="https://img.icons8.com/ios-filled/50/clock.png"/>
+        <p>Atendimento 24h para emergências</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimento -->
+  <section class="depoimentos" id="depoimentos">
+    <h2>O que dizem nossos clientes</h2>
+    <blockquote>
+      <p>“Excelente atendimento! Resolveram um problema que outros não conseguiam.”</p>
+      <footer>— Ana C.</footer>
+    </blockquote>
+    <blockquote>
+      <p>“Excelente atendimento! Pontual e Resolveram um problema rápido.”</p>
+      <footer>— Batata da Hora</footer>
+    </blockquote>
+  </section>
+
+  <!-- Diferenciais + Formulário -->
+  <section class="form-section" >
+    <div class="left" id="diferenciais">
+      <h3>Diferenciais:</h3>
+      <p>
+      <ul style="list-style: none; padding: 0;">
+        <li>✅ Oferecemos serviços com foco em qualidade e segurança</li>
+        <li>✅ Equipe especializada</li>
+        <li>✅ Orçamento sem compromisso</li>
+        <li>✅ Atendimento em toda a Região dos Lagos</li>
+        <li>✅ Aceitamos: Pix, Cartão e Moeda Social(Saquarema)</li>
+
+      </ul>
+
+    <br>
+    <hr>
+    <br>
+      <div class="servicos">
+        <div class="serv">
+          <a href="#eletrica"><img src="assets/eletrica.png" alt="Elétrica"/></a>
+          <p>Elétrica</p>
+        </div>
+        <div class="serv">
+          <a href="#automacao"><img src="assets/automacao.png" alt="Automação"/></a>
+          <p>Automação</p>
+        </div>
+      </div>
+
+    
+      
+      
+    </div>
+
+    <div class="right" id="orcamento">
+      <h2>Solicite um orçamento</h2>
+    <form id="orcamentoForm" >
+      <input type="text" name="nome" placeholder="Nome" required />
+      <input type="tel" name="telefone" placeholder="Telefone" required />
+      <input type="text" name="cidade" placeholder="Cidade" required />
+      <select name="servico" required>
+        <option value="">Tipo de serviço desejado</option>
+        <option>Instalações Elétricas</option>
+        <option>Manutenção Elétrica</option>
+        <option>Automação Residencial</option>
+
+      </select>
+      <button type="submit">Enviar</button>
+    </form>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    
+    
+    
+    <section class="parcerias" id="parcerias">
+      <div class="left">
+        <h3>Clientes</h3>
+        <a href="https://www.ifood.com.br/delivery/saquarema-rj/batata-da-hora-retiro-bacaxa/75115182-e9c6-4ea8-adcb-5164f74d203b"><img src="assets/batatahora.jpeg" alt="Batata da Hora" /></a>
+        
+
+      </div>
+
+      
+      
+      <div class="right">
+        <h3>Parceiros</h3>
+        <img src="assets/clamper.jpg" alt="Clamper" />
+        <img src="assets/Schneider.png" alt="Schneider" />
+        <img src="assets/intelbras.png" alt="Intelbras" />
+        <img src="assets/tigre.png" alt="Tigre" />
+
+      </div>
+    </section>
+    <hr>
+    <p>© 2025 HL Elétrica e Automação<p>
+    Todos os direitos reservados.</p>
+    <!--<p>E-mail:<a href="mailto:eletricaeautomacaoh@gmail.com"> eletricaeautomacaoh@gmail.com</a></p>-->
+  </footer>
+</body>
+</html>

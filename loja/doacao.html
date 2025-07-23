@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Doações - Projeto Nutriação</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    .qrcode, .dados-bancarios {
+      text-align: center;
+      margin: 20px 0;
+    }
+    form {
+      margin-top: 30px;
+    }
+    input[type="text"], input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      box-sizing: border-box;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+    .doadores {
+      margin-top: 30px;
+    }
+    .doadores ul {
+      list-style: none;
+      padding: 0;
+    }
+    .doadores li {
+      background: #e9ffe9;
+      padding: 8px;
+      margin: 5px 0;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Projeto Nutriação</h1>
+    <h2>Ajude com sua doação</h2>
+
+    <div class="qrcode">
+      <p>Escaneie o QR Code para doar:</p>
+      <img src="qrcode-exemplo.png" alt="QR Code para doação" width="200">
+    </div>
+
+    <div class="dados-bancarios">
+      <h3>Ou doe via transferência bancária:</h3>
+      <p><strong>Banco:</strong> 000 - Banco Exemplo</p>
+      <p><strong>Agência:</strong> 1234</p>
+      <p><strong>Conta:</strong> 56789-0</p>
+      <p><strong>Pix (CNPJ):</strong> 12.345.678/0001-90</p>
+    </div>
+
+    <form action="https://formsubmit.co/ssleonardo2018@gmail.com" method="POST" id="form-doacao">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="Nova doação recebida pelo site!">
+      <label for="nome">Nome:</label>
+      <input type="text" name="nome" id="nome" required>
+
+      <label for="email">E-mail:</label>
+      <input type="email" name="email" id="email" required>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <div class="doadores">
+      <h3>Doadores:</h3>
+      <ul id="lista-doadores"></ul>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('form-doacao');
+    const lista = document.getElementById('lista-doadores');
+
+    form.addEventListener('submit', function(e) {
+      const nome = document.getElementById('nome').value;
+      if (nome.trim() !== "") {
+        const li = document.createElement('li');
+        li.textContent = nome;
+        lista.appendChild(li);
+      }
+    });
+  </script>
+</body>
+</html>

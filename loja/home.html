@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Nutriação</title>
+</head>
+<body>
+  <h1>Bem-vindo à Nutriação</h1>
+  {% if session.get('user_id') %}
+    <p>Você está logado!</p>
+    <a href="{{ url_for('logout') }}">Sair</a>
+  {% else %}
+    <a href="{{ url_for('login') }}">Login</a> | <a href="{{ url_for('register') }}">Cadastro</a>
+  {% endif %}
+</body>
+</html>
