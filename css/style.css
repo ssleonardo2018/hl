@@ -91,7 +91,7 @@ header {
 }
 
 header h2 {
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-bottom: 1rem;
 }
 
@@ -278,5 +278,6 @@ form button {
 .social-links {
   margin-top: 10px;
 }
+
 
 
