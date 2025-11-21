@@ -26,12 +26,12 @@
 
     // Gallery population & filter
     const galleryData = [
-      {cat:'servico',sub:'eletrica',title:'Instalação de quadro elétrico',img:'/assets/qdc.png'},
+      {cat:'servico',sub:'eletrica',title:'Instalação de quadro elétrico',img:'assets/qdc.png'},
       {cat:'produto',sub:'informatica',title:'Notebook',img:'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1200&auto=format&fit=crop'},
       {cat:'servico',sub:'informatica',title:'Configuração de rede',img:'https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1200&auto=format&fit=crop'},
-      {cat:'produto',sub:'eletrica',title:'Disjuntores',img:'/assets/disjuntores.png'},
-      {cat:'servico',sub:'eletrica',title:'Inspeção de segurança',img:'/assets/inspecao.png'},
-      {cat:'produto',sub:'informatica',title:'SSD 960GB - pronta entrega',img:'/assets/ssd.png'}
+      {cat:'produto',sub:'eletrica',title:'Disjuntores',img:'assets/disjuntores.png'},
+      {cat:'servico',sub:'eletrica',title:'Inspeção de segurança',img:'assets/inspecao.png'},
+      {cat:'produto',sub:'informatica',title:'SSD 960GB - pronta entrega',img:'assets/ssd.png'}
     ];
     const gallery = document.getElementById('gallery');
     function renderGallery(filter){
@@ -96,4 +96,5 @@
     });
 
     // lightweight analytics hook (console)
+
     console.log('HL Serviços — wireframe carregado');
