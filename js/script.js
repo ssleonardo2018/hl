@@ -46,17 +46,76 @@
     document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>renderGallery(b.dataset.filter)));
 
     // Testimonials carousel
-    const testi = [
-      {name:'Mariana R.',stars:5,text:'Serviço rápido e profissional. Recomendado!'},
-      {name:'Batata da Hora',stars:5,text:'Resolveram meu problema de curto em pouco tempo com garantia.'},
-      {name:'João P.',stars:5,text:'Atualizaram o SSD do meu notebook e ficou como novo.'}
-    ];
+     const testi = [
+  {
+    name:'Mariana R.',
+    stars:5,
+    img:'mariana.png',
+    text:'Serviço rápido e profissional. Recomendado!'
+  },
+  {
+    name:'<a href="https://www.ifood.com.br/delivery/saquarema-rj/batata-da-hora-retiro-bacaxa/75115182-e9c6-4ea8-adcb-5164f74d203b">Batata da Hora</a>',
+    stars:5,
+    img:'assets/batatahora.jpeg',
+    text:'Resolveram meu problema de curto em pouco tempo com garantia.'
+  },
+  {
+    name:'João P.',
+    stars:5,
+    img:'joao.png',
+    text:'Atualizaram o SSD do meu notebook e ficou como novo.'
+  }
+];
+
     const testiSlides = document.getElementById('testiSlides');
+
     function renderTesti(){
       testiSlides.innerHTML='';
+
       testi.forEach(t=>{
-        const s = document.createElement('div'); s.style.minWidth='100%'; s.style.padding='18px';
-        s.innerHTML = `<div style=\"display:flex;gap:12px;align-items:center\"><div style=\"width:56px;height:56px;border-radius:999px;background:var(--glass);display:flex;align-items:center;justify-content:center;font-weight:800\">${t.name.charAt(0)}</div><div><strong>${t.name}</strong><div class=\"stars\">${'★'.repeat(t.stars)}</div></div></div><p style=\"margin-top:12px\">${t.text}</p>`;
+        const s = document.createElement('div'); 
+        s.style.minWidth='100%'; 
+        s.style.padding='18px';
+
+        s.innerHTML = `
+          <div style="display:flex;gap:12px;align-items:center">
+
+              <!-- Avatar com fallback -->
+              <div style="position:relative; width:56px; height:56px;">
+                  
+                  <!-- Imagem -->
+                  <img src="${t.img}" 
+                      style="width:56px;height:56px;border-radius:999px;object-fit:cover;position:absolute;top:0;left:0;"
+                      onerror="this.style.display='none'; this.parentElement.querySelector('.fallback').style.display='flex';">
+
+                  <!-- Fallback com letra -->
+                  <div class="fallback"
+                      style="
+                        display:none;
+                        width:56px;
+                        height:56px;
+                        border-radius:999px;
+                        background:var(--glass);
+                        align-items:center;
+                        justify-content:center;
+                        font-weight:800;
+                        font-size:20px;
+                      ">
+                      ${t.name.charAt(0)}
+                  </div>
+
+              </div>
+
+              <div>
+                  <strong>${t.name}</strong>
+                  <div class="stars">${'★'.repeat(t.stars)}</div>
+              </div>
+
+          </div>
+
+          <p style="margin-top:12px">${t.text}</p>
+        `;
+
         testiSlides.appendChild(s);
       });
     }
@@ -98,3 +157,4 @@
     // lightweight analytics hook (console)
 
     console.log('HL Serviços — wireframe carregado');
+
